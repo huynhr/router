@@ -12,6 +12,7 @@ var config = {
         test : /\.jsx?$/,
         include : APP_DIR,
         loader : 'babel-loader',
+        plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
       }
     ]
   },
