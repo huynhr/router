@@ -12,7 +12,10 @@ var config = {
         test : /\.jsx?$/,
         include : APP_DIR,
         loader : 'babel-loader',
-        plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+        query: {
+          presets: ['react', 'es2015'],
+          plugins: ['transform-decorators-legacy']
+        }
       }
     ]
   },
