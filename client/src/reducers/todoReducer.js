@@ -1,8 +1,9 @@
 export default function reducer(state={
-  todo: [],
+  todo: ['learn router', 'learn redux', 'build backend'],
   fetching: false,
   fetched: false,
   error: null,
+  test: 'hello world',
 }, action) {
 
   switch (action.type) {
@@ -14,6 +15,9 @@ export default function reducer(state={
     }
     case 'FETCH_TODOS_FULFILLED': {
       return {...state, todo: todo.payload, fetched: true, fetching: false}
+    }
+    case 'CHANGE_TEXT' : {
+      return {...state, test: action.payload}
     }
   }
 

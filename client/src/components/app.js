@@ -4,7 +4,7 @@ import Popular from './popular.js';
 import Nav from './nav.js';
 import Todo from './todo.js';
 import { connect } from 'react-redux'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, HashRouter } from 'react-router-dom';
 
 @connect((store) => {
   return {
@@ -20,12 +20,12 @@ class App extends React.Component {
 
 
   render() {
-  const Router = BrowserRouter;
+  // const Router = BrowserRouter;
+  const Router = HashRouter;
   const { store } = this.props
     return(
       <Router>
         <div>
-          {console.log(this.props)}
           <Nav />
           <Route exact path='/' component={Home} />
           <Route path='/popular' component={Popular} />
